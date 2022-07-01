@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hexo | markdown</title><meta name="description" content=""><link rel="icon" href="/images/favicon.png"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"><link rel="stylesheet" href="/css/highlights/darkula.css"><link rel="stylesheet" href="/css/main.css"><link rel="search" type="application/opensearchdescription+xml" href="http://example.com/atom.xml" title="Hexo"><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div class="container"><header class="main-header"><h1 class="main-header__title uplize"><a class="main-header__title__link" href="/">Hexo</a></h1><nav class="main-header__nav"><ul class="main-nav"><li class="main-nav__list"><a class="main-nav__list__link" href="/" target="_self">HOME</a></li><li class="main-nav__list"><a class="main-nav__list__link" href="/archives/" target="_self">ARCHIVE</a></li><li class="main-nav__list"><a class="main-nav__list__link" href="https://github.com/ntlywxb" target="_blank">GITHUB</a></li></ul></nav></header><main class="container__wrapper"><article class="article post"><h3 class="article__title">markdown</h3><div class="article__date metadata"><div class="post-info">2022/07/01</div></div><div class="article__tags metadata">Tags:
+</div><div class="article__body"><h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>一个段落是由一个或多个连续的行构成，段落间靠一个或以上视觉上的空行划分。一般的段落不应该用空格或制表符缩进</p>
+<pre><code>这是一个段落。它有两个句子。
+
+这是另一个段落。它也有 
+两个句子。
+</code></pre>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>在文本中输入的换行会从最终生成的结果中删除，浏览器会根据可用空间自动换行。如果想强迫换行，可以在行尾插入至少两个空格。</p>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><pre><code>*强调* 或者 _强调_  (示例：斜体)
+**加重强调** 或者 __加重强调__ (示例：粗体)
+***特别强调*** 或者 ___特别强调___ (示例：粗斜体)
+</code></pre>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>要在Markdown中插入代码，你有两种选择。 一种是把代码用反引号(&#96;)(键盘上Esc键下面的键)包起，例如：</p>
+<pre><code>夹杂着`一些代码`的文字内容,
+</code></pre>
+<p>又或者以制表符或至少四个空格缩进的行，例如：</p>
+<pre><code>    第一行代码
+    第二行代码
+    第三行代码
+</code></pre>
+<p>后面一种用法会让Markdown保留所有的空白字符——而与之相反，一般情况下，Markdown会删除所有换行和空格，打乱原有的缩进和排版。</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><pre><code>* 无序(没有编号的)列表中的一项
+    * 一个子项，要以一个制表符或者4个空格缩进
+* 无序列表中的另一个项
+1. 有序(排好序，有编号的)列表中的一项
+2. 有序列表中的另一个项
+</code></pre>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>可以在标题内容前输入特定数量的井号(‘#’)来实现对应级别的HTML样式的标题(HTML提供六级标题)。例如：</p>
+<pre><code># 一级标题
+#### 四级标题
+</code></pre>
+<p>一级和二级标题还有一种写法：</p>
+<pre><code>一级标题
+===================
+
+二级标题
+--------------------
+</code></pre>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>引用只需要在被引用的内容段落开头加上右尖括号(‘&gt;’)即可。你可以选择只在开头加一个。也可以在每行前面都加一个，效果是一样的。</p>
+<pre><code>&gt; 这一整段的内容都会作为一个HTML的引用元素。引用元素是会自动优化排版的（reflowable，可回流）。你可以任意地将引用的内容包含进来，然后所有这些都会被解析成为单独一个引用元素。
+</code></pre>
+<p>上述内容会转换成以下HTML内容：</p>
+<pre><code>&lt;blockquote&gt;&lt;p&gt;这一整段的内容都会作为一个HTML的引用元素。引用元素是会自动优化排版的（reflowable，可回流）。你可以任意地将引用的内容包含进来，然后所有这些都会被解析成为单独一个引用元素。&lt;/p&gt;&lt;/blockquote&gt;
+</code></pre>
+<p>引用可以嵌套。如果要在一个引用里插入一个引用，可以用两个(‘&gt;’)开头。依此类推，根据嵌套层次加相应数量的符号。</p>
+<pre><code>&gt; 这是一个引用。这是第一行
+这是第二行。
+&gt;&gt; 这是一个嵌套的引用。这是第一行。
+这是第二行
+&gt; 
+&gt; 外层引用的第三行。前面需要一个视觉上的空行表示内层嵌套的结束，空行前面的(&#39;&gt;&#39;)可以有可以没有。
+</code></pre>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>链接可以在行内插入：</p>
+<pre><code>[链接文字](链接地址)
+
+例子： [Markdown](http://zh.wikipedia.com/wiki/Markdown)
+</code></pre>
+<p>另一种选择是，链接地址可以放在段落后面的脚注，前面放上链接引用标签区分。举例说，先在内容行内插入以下内容：</p>
+<pre><code>[链接文字][链接引用标签]
+</code></pre>
+<p>然后在段落的后面（或者文档的结尾）放上以下内容，就可以生成一个链接：</p>
+<pre><code>[链接引用标签]: 链接地址 &quot;链接标题&quot;
+</code></pre>
+<h3 id="水平分割线"><a href="#水平分割线" class="headerlink" title="水平分割线"></a>水平分割线</h3><p>要生成水平分割线，可以在单独一行里输入3个或以上的短横线、星号或者下划线实现。短横线和星号之间可以输入任意空格。以下每一行都产生一条水平分割线。</p>
+<pre><code>* * *
+***
+*****
+- - -
+---------------------------------------
+</code></pre>
+</div></article><div class="pagination"></div></main><footer class="footer metadata"><p class="footer__text">© 2022 John Doe</p><p class="footer__text">Powered by <a class="footer__text__link" href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a class="footer__text__link" href="https://pages.github.com/" target="_blank">Github Page</a></p></footer></div></body></html>
